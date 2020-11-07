@@ -57,11 +57,6 @@
         "value": "",
         "required": false
       },
-      "AUTH_CHATS": {
-        "description": "Add here owner ID or Group ID for chat authorization.",
-        "value": "",
-        "required": true
-      },
       "INDEX_URL": {
         "description": "Refer to https://github.com/maple3142/GDIndex/ The URL should not have any trailing '/'.",
         "value": "",
