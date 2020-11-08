@@ -455,7 +455,7 @@ class GoogleDriveHelper:
                     content += f'<b> | <a href="https://telegra.ph/{self.path[nxt_page]}">Next</a></b>'
                     nxt_page += 1
             telegra_ph.edit_page(path = self.path[prev_page],
-                                 title = 'Santoni-Hub',
+                                 title = 'Drive-X',
                                  html_content=content)
         return
 
@@ -482,7 +482,7 @@ class GoogleDriveHelper:
             content_count = 0
             self.telegraph_content = []
             self.path = []
-            msg += f'<h4>Results : {fileName}</h4><br>@snapxbot #Santoni-X<br><br>'
+            msg += f'<h4>Results : {fileName}</h4><br>@drivexbot #Drive-X<br><br>'
 
             for file in response.get('files', []):
                 if file.get('mimeType') == "application/vnd.google-apps.folder":  # Detect Whether Current Entity is a Folder or File.
@@ -511,7 +511,7 @@ class GoogleDriveHelper:
                 self.telegraph_content.append(msg)
 
             for content in self.telegraph_content :
-                self.path.append(telegra_ph.create_page(title = 'Santoni-Hub',
+                self.path.append(telegra_ph.create_page(title = 'Drive-X',
                                                 html_content=content )['path'])
 
             self.num_of_path = len(self.path)      
